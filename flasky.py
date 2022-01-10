@@ -53,7 +53,7 @@ def test(coverage, test_names):
         COV.erase()
 
 
-#deprecated, might use werkzeug.middleware.profiler.ProfilerMiddleware
+#deprecated, might use werkzeug.middleware.profiler.ProfilerMiddleware or downgrade werkzeug
 """@app.cli.command()
 @click.option('--length', default=25,
               help='Number of functions to include in the profiler report.')
