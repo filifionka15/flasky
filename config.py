@@ -37,11 +37,11 @@ class TestingConfig(Config):
     WTF_CSRF_ENABLED = False
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-    'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
-        uri = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
-        
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql://zelozghzbpyxpb:801bcfc92fe0a230cc4bb4ae106821428a6875a32739a14b4beb2e3da597dbfd@ec2-54-172-219-6.compute-1.amazonaws.com:5432/dasiog2hn0qca3'
+
+
+    
     @classmethod
     def init_app(cls, app):
         Config.init_app(app)
